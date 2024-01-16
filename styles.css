@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: blueviolet;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+#display {
+  display: flex;
+  height: 40px;
+  width: 200px;
+  border: 3px solid black;
+  background-color: white;
+}
+#numbersContainer {
+  display: flex;
+  flex-direction: column;
+}
+#keyPad {
+  border-bottom: 0;
+  justify-content: center;
+  padding: 14px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0;
+}
+#numbersContainer > * {
+  display: flex;
+}
+#numbersContainer > * > *,
+.operators {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+.numberPad,
+.operators,
+#keyDel {
+  width: 40px;
+  height: 20px;
+}
+#resultContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  height: 30px;
+  /* border: 3px solid yellow; */
+  border-top: 0;
+}
+#equal {
+  width: 100px;
+}
+#clear {
+  width: 60px;
+}
+#clear,
+#equal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border: 1px solid;
+}
+.numberPad,
+.operators,
+#equal,
+#clear,
+#keyDel {
+  cursor: pointer;
+}
