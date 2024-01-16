@@ -2,19 +2,25 @@
   box-sizing: border-box;
 }
 body {
-  background-color: blueviolet;
+  background-color: rgb(135, 132, 138);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 #container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  height: 90vh;
+  height: max(70vh, 50vw);
+  width: min(50vh, 50vw);
+  border: 3px solid yellow;
 }
 #display {
   display: flex;
-  height: 40px;
-  width: 200px;
+  height: 30%;
+  width: 100%;
   border: 3px solid black;
   background-color: white;
 }
@@ -25,13 +31,20 @@ body {
 #keyPad {
   border-bottom: 0;
   justify-content: center;
-  padding: 14px;
   display: flex;
   flex-direction: row;
-  padding-bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+#numbersContainer {
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgb(255, 102, 0);
 }
 #numbersContainer > * {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 #numbersContainer > * > *,
 .operators {
@@ -42,30 +55,29 @@ body {
 .numberPad,
 .operators,
 #keyDel {
-  width: 40px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
 }
 #resultContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px;
-  height: 30px;
-  /* border: 3px solid yellow; */
-  border-top: 0;
+  height: 20%;
+  width: 100%;
+  border: 3px solid rgb(255, 102, 0);
 }
 #equal {
-  width: 100px;
+  width: 150%;
 }
 #clear {
-  width: 60px;
+  width: 100%;
 }
 #clear,
 #equal {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
+  height: 100%;
   border: 1px solid;
 }
 .numberPad,
