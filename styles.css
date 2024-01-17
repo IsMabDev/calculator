@@ -4,25 +4,29 @@
 body {
   background-color: rgb(135, 132, 138);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
-  height: 100vh;
+  max-height: 100vh;
+  /* margin-top: 100px; */
 }
 #container {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: max(70vh, 50vw);
+  height: min(70vh, 50vw);
   width: min(50vh, 50vw);
-  border: 3px solid yellow;
 }
 #display {
   display: flex;
-  height: 30%;
+  flex: 1;
   width: 100%;
+  align-items: center;
   border: 3px solid black;
   background-color: white;
+  font-size: min(7vw, 7vh);
+  padding-left: min(3vw, 3vh);
 }
 #numbersContainer {
   display: flex;
@@ -32,44 +36,49 @@ body {
   border-bottom: 0;
   justify-content: center;
   display: flex;
+  flex: 4;
   flex-direction: row;
   width: 100%;
-  height: 100%;
 }
 #numbersContainer {
   width: 100%;
   height: 100%;
-  border: 3px solid rgb(255, 102, 0);
 }
 #numbersContainer > * {
   display: flex;
   width: 100%;
   height: 100%;
 }
-#numbersContainer > * > *,
+#numbersContainer > * > * > *,
 .operators {
   display: flex;
   justify-content: center;
-  border: 1px solid black;
 }
 .numberPad,
 .operators,
 #keyDel {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-size: min(6vw, 6vh);
+  border: 1px solid black;
 }
+
 #resultContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20%;
   width: 100%;
-  border: 3px solid rgb(255, 102, 0);
+  flex: 1;
 }
 #equal {
   width: 150%;
+  background-color: red;
 }
 #clear {
+  background-color: green;
+
   width: 100%;
 }
 #clear,
@@ -79,6 +88,7 @@ body {
   align-items: center;
   height: 100%;
   border: 1px solid;
+  font-size: min(6vw, 6vh);
 }
 .numberPad,
 .operators,
@@ -86,4 +96,20 @@ body {
 #clear,
 #keyDel {
   cursor: pointer;
+}
+.numberPad {
+  background-color: aqua;
+}
+.operators {
+  background-color: rgb(165, 42, 163);
+}
+#keyDel {
+  background-color: orange;
+}
+
+#footer {
+  font-size: min(5vw, 5vh);
+}
+#title {
+  font-size: min(7vw, 7vh);
 }
