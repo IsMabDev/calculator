@@ -108,10 +108,22 @@ function resetAll() {
   var2 = "";
   operator = "";
   isResult = false;
+  // display.style.fontSize = "min(7vw,7vh)";
 }
+// function adaptDisplayFontSize() {
+//   let displayWidth = getComputedStyle(display).width.match(/\d+/)[0];
 
+//   let displayFontSize = Number(
+//     getComputedStyle(display).fontSize.match(/\d+/)[0]
+//   );
+//   let displayTextLength = (var1 + operator + var2).length;
+//   if (displayTextLength > Math(1.4 * displayWidth) / displayFontSize) {
+//     display.style.fontSize = `${(1.8 * displayWidth) / displayTextLength}px`;
+//   } else display.style.fontSize = "min(7vw,7vh)";
+// }
 function updateDisplay() {
   display.textContent = var1 + operator + var2;
+  // adaptDisplayFontSize();
 }
 
 function updateOperand(variable, number) {

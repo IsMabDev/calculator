@@ -1,4 +1,4 @@
-z = "1.";
-y = !isNaN(z);
+z = "10qsdf";
+y = z.match(/\d+/);
 z;
 y;

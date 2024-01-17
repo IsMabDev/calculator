@@ -8,15 +8,14 @@ body {
   justify-content: start;
   align-items: center;
   max-height: 100vh;
-  /* margin-top: 100px; */
 }
 #container {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: min(70vh, 50vw);
-  width: min(50vh, 50vw);
+  height: 70vh;
+  width: 70vw;
 }
 #display {
   display: flex;
@@ -27,6 +26,7 @@ body {
   background-color: white;
   font-size: min(7vw, 7vh);
   padding-left: min(3vw, 3vh);
+  /* overflow-wrap: break-word; */
 }
 #numbersContainer {
   display: flex;
