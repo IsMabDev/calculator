@@ -36,18 +36,6 @@ numbers.forEach((target) =>
         updateOperand("var2", target.textContent);
       }
     }
-
-    // if (result !== "") {
-    //   resetAll();
-    //   updateDisplay();
-    // }
-
-    // if (isFirst) {
-    //   updateOperand("var1", target.textContent);
-    // } else {
-    //   updateOperand("var2", target.textContent);
-    //   isFirst = false;
-    // }
   })
 );
 operators.forEach((target) => {
@@ -110,6 +98,8 @@ function resetAll() {
   isResult = false;
   display.style.fontSize = "min(7vw,7vh)";
 }
+
+//if the string displayer exceeds the display width, the font size is changed
 function adaptDisplayFontSize() {
   let displayWidth = getComputedStyle(display).width.match(/\d+/)[0];
 
@@ -117,11 +107,11 @@ function adaptDisplayFontSize() {
     getComputedStyle(display).fontSize.match(/\d+/)[0]
   );
   let displayTextLength = (var1 + operator + var2).length;
-  if (displayTextLength > (1.7 * displayWidth) / displayFontSize) {
-    display.style.fontSize = `${(1.7 * displayWidth) / displayTextLength}px`;
+  if (displayTextLength > (1.6 * displayWidth) / displayFontSize) {
+    display.style.fontSize = `${(1.6 * displayWidth) / displayTextLength}px`;
   } else
     display.style.fontSize = `min(${
-      (1.7 * displayWidth) / displayTextLength
+      (1.6 * displayWidth) / displayTextLength
     }px,min(7vw,7vh))`;
 }
 function updateDisplay() {
